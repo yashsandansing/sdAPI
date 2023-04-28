@@ -1,10 +1,9 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, BackgroundTasks
 from pydantic import BaseModel
 from bark import generate_audio, SAMPLE_RATE
 from scipy.io.wavfile import write as write_wav
 from fastapi.responses import FileResponse
 import tempfile
-from fastapi import BackgroundTasks
 import os
 
 app = FastAPI()
